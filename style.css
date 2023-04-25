@@ -190,4 +190,12 @@ article h3 {
     width: 80vw;
     min-width: 400px;
   }
+
+  .item-card {
+    text-align: center;
+  }
+
+  article {
+    text-align: center;
+  }
 }

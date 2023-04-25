@@ -4,7 +4,7 @@ const hello = document.querySelector("h1");
 while (!userName) {
   userName = prompt("이름을 정해주세요");
 }
-hello.innerHTML = `Welcome!</br> ${userName} 님`;
+hello.innerHTML = `Welcome!${userName} 님`;
 
 // allMemo를 JSON 형식으로 작성된 문자열을 JS객체로 변환
 let allMemo = JSON.parse(localStorage.getItem("allMemo"));
