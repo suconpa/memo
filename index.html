@@ -4,44 +4,70 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      input {
-        display: block;
-        width: 300px;
-        height: 30px;
-        margin-bottom: 10px;
-      }
-
-      textarea {
-        display: block;
-        width: 300px;
-        height: 300px;
-        margin-bottom: 10px;
-      }
-
-      button {
-        display: block;
-        width: 306px;
-        height: 30px;
-      }
-    </style>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./common.css" />
+    <link rel="stylesheet" href="./modal.css" />
+    <script
+      src="https://kit.fontawesome.com/8b26625b68.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <main>
-      <section>
-        <input type="text" name="" id="title" />
-        <textarea name="" id="content" cols="30" rows="10"></textarea>
-        <button onclick="saveNote()">메모</button>
-      </section>
-      <section id="display"></section>
-    </main>
+    <section>
+      <article class="item-list" id="display">
+        <ul class="memo-list">
+          <li class="list-wrap">
+            <div class="list-num">No.1</div>
+            <article class="title-view">
+              <h3>제목</h3>
+              <p>내용</p>
+            </article>
+            <div class="button-wrap">
+              <button class="view">보기</button>
+              <button class="delete">삭제</button>
+            </div>
+          </li>
+        </ul>
+      </article>
+      <article class="item-card">
+        <h1>Welcome Memo!</h1>
+        <p>
+          안녕하세요.<br />
+          My memo에 오신걸 환영합니다.
+        </p>
+        <div class="memo-inner">
+          <div class="wrap">
+            <h2>Memo Title</h2>
+            <input
+              id="title"
+              type="text"
+              placeholder="메모의 제목을 입력해주세요"
+            />
+            <h2>Memo content</h2>
+            <textarea
+              id="content"
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="메모의 내용을 입력해주세요"
+            ></textarea>
+          </div>
+          <button type="button" id="save-btn">저장하기</button>
+        </div>
+      </article>
+    </section>
+    <div class="background-opacity"></div>
+    <article class="modal" class="">
+      <span class="line-color"></span>
+      <h3></h3>
+      <p></p>
+      <div class="but-wrap">
+        <button id="modal-close-button" type="button">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </article>
 
     <script src="./main.js"></script>
   </body>
