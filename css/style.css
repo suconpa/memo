@@ -1,0 +1,193 @@
+@import url(common.css);
+
+body {
+  background: #f8eadc;
+  height: 100vh;
+}
+
+section {
+  display: flex;
+  margin: auto;
+  padding: 10px;
+  width: 1000px;
+  background: #ffffff;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.373);
+}
+
+.item-list {
+  background-color: #ec755e;
+  border-radius: 10px;
+  color: #fff;
+  width: 300px;
+  flex-shrink: 0;
+  overflow: scroll;
+  height: 670px;
+}
+
+.list-wrap article {
+  color: #535265;
+}
+
+.item-card {
+  padding: 50px 100px;
+  position: relative;
+  width: 100%;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.item-card > p {
+  color: gray;
+  padding: 10px 0;
+  line-height: 1.5rem;
+}
+
+.memo-inner h2 {
+  padding-top: 20px;
+}
+
+.memo-list {
+  padding: 20px;
+}
+
+.list-wrap {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+  background-color: #fff;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.373);
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.list-num {
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 30px;
+  color: #9c321a;
+  font-weight: bold;
+  margin-right: 10px;
+  width: 150px;
+}
+
+.list-wrap:hover {
+  background-color: #e9e9e9;
+}
+
+article h3 {
+  padding: 7px 0;
+}
+
+#save-btn {
+  background: #76b5b9;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 50px;
+  width: 100px;
+  text-align: center;
+  color: #fff;
+  display: block;
+  margin-left: auto;
+}
+
+#save-btn:hover {
+  color: #17233a;
+  font-weight: bold;
+}
+
+.item-list .memo-list .button-wrap {
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+  gap: 5px;
+}
+
+.item-list .memo-list .button-wrap button {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  background: #76b5b9;
+}
+
+.item-list .memo-list .button-wrap button:hover {
+  font-weight: bold;
+  color: #17233a;
+}
+
+.item-list .memo-list .button-wrap .delete:hover {
+  color: rgb(185, 0, 0);
+}
+
+.item-list .memo-list .list-wrap article h3,
+.item-list .memo-list .list-wrap article p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item-list .memo-list .list-wrap article {
+  width: 200px;
+}
+
+@media (max-width: 1100px) {
+  body {
+    min-width: 400px;
+  }
+  section {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 50px 50px;
+
+    width: auto;
+    background: #ffffff;
+    border-radius: 10px;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    transform: initial;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.373);
+  }
+
+  .item-list {
+    width: 100%;
+  }
+
+  .item-card {
+    padding: 10px;
+    position: relative;
+    width: 100%;
+  }
+
+  #save-btn {
+    margin: auto;
+  }
+
+  .background-opacity.bg-opacity {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(40, 40, 40, 0.52);
+  }
+
+  .modal.modal-hidden {
+    width: 80vw;
+    min-width: 400px;
+  }
+}
