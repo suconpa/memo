@@ -125,14 +125,14 @@ function render() {
 
 // 로컬스토리지에 저장되어있는 값 제거
 function remove() {
-  console.log(event.srcElement.id);
+  const check = confirm("정말 삭제하시겠습니까?");
   // allMemo에 값중 event.secElement.id 와 같은 값을
   // idx상수에 return
   const idx = allMemo.find((item) => item.len == event.srcElement.id);
 
   // 만약 idx에 값이 있다면 <- 0이 아닌 수는 모두 truthy 이기 때문에
   // if 문에 들어갈 수 있다
-  if (idx) {
+  if (idx && check === true) {
     // allMemo의 요소중 item.len 의 key와 idx.len 이 같은 인덱스 번호를 반환시켜
     // splice로 1개만 잘라냄
     allMemo.splice(
