@@ -58,3 +58,9 @@ i {
   font-size: 1.2rem;
   pointer-events: none;
 }
+
+textarea {
+  resize: none;
+  width: 100%;
+}
+
